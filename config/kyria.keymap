@@ -44,7 +44,7 @@
 	&trans        &kp F7     &kp F8     &kp F9     &kp F10    &kp F11                                                      &kp F12    &none      &none      &kp HOME   &kp END    &trans
                                         &none      &kp LALT   &kp LGUI  &mo LAYER_1 &kp SPACE        &kp SPACE &mo LAYER_2 &none      &none      &none
 			>;
-        }
+        };
 
         layer_2 {
 // ---------------------------------------------------------------------------------------------------------------------------------
@@ -58,6 +58,6 @@
 	&trans        &kp F7     &kp F8     &kp F9     &kp F10    &kp F11                                                      &kp F12    &C_PP      &C_NEXT    &kp PG_UP  &kp PG_DN  &trans
                                         &none      &kp LALT   &kp LGUI  &mo LAYER_1 &kp SPACE        &kp SPACE &mo LAYER_2 &C_VOL_UP  &C_VOL_DN  &none
 			>;
-        }
+        };
 	};
 };
