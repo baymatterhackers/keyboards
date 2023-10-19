@@ -4,58 +4,94 @@
  * SPDX-License-Identifier: MIT
  */
 
- #include <behaviors.dtsi>
- #include <dt-bindings/zmk/keys.h>
- #include <dt-bindings/zmk/bt.h>
- #include <dt-bindings/zmk/rgb.h>
- #include <dt-bindings/zmk/ext_power.h>
- #include <dt-bindings/zmk/outputs.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/rgb.h>
 
- #define DEFAULT 0
- #define LOWER  1
- #define RAISE  2
- #define ADJUST 3
+#define DEFAULT 0
+#define LOWER  1
+#define RAISE  2
+#define ADJUST 3
 
 // Log to USB (not working yet)
 // CONFIG_ZMK_USB_LOGGING=y
-
 /* NOTE: At the time of the creation of this keymap, there are no specified codes for 'eisuu' and 'kana' input in ZMK.
 However, 'LANG1' and 'LANG2' are fully-functioning candidates for 'kana' and 'eisuu' input respectively.
 As such, those are in use within the default layer at this time.*/
 
 / {
-       keymap {
-              compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-              default_layer {
- // ---------------------------------------------------------------------------------------------------------------------------------
- // |   LOWER Hold / ESC Tap   |   1        |   2             |   3          |   4        |   5    |                          |   6      |   7           |   8    |   9             |   0              |   ADJUST Hold / BSPC Tap  |
- // |   LOWER Hold / TAB Tap   |   Q        |   W             |   E          |   R        |   T    |                          |   Y      |   U           |   I    |   O             |   P              |            ENTER          |
- // |           -              |   A        |   S             |   D          |   F        |   G    |                          |   H      |   J           |   K    |   L             |   ;              |             '             |
- // |         SHIFT            |   Z        |   X             |   C          |   V        |   B    |         |        |       |   N      |   M           |   ,    |   .             |   /              |            RSHIFT         |
- // |         RAISE            |   `        |  CTRL           |  ALT         |  LGUI      | SPACE  |         |        |       |  SPACE   |  RGUI         |   |    |   [             |   ]              |            RAISE          |
-                     bindings = <
-       &lt LOWER ESC            &kp N1      &kp N2             &kp N3        &kp N4       &kp N5                               &kp N6     &kp N7        &kp N8    &kp N9            &kp N0             &lt ADJUST BSPC
-       &lt LOWER TAB            &kp Q       &kp W              &kp E         &kp R        &kp T                                &kp Y      &kp U         &kp I     &kp O             &kp P              &kp RET
-       &kp MINUS                &kp A       &kp S              &kp D         &kp F        &kp G                                &kp H      &kp J         &kp K     &kp L             &kp SEMI           &kp SQT
-       &kp LEFT_SHIFT  	    &kp Z       &kp X              &kp C         &kp V        &kp B    &trans          &trans   &kp N      &kp M         &kp COMMA &kp PERIOD        &kp SLASH          &kp RIGHT_SHIFT
-       &mo RAISE  	        &kp GRAVE   &kp LEFT_CONTROL   &kp LEFT_ALT  &kp LEFT_GUI  &kp LOWER  &trans          &trans   &mo SPACE  &kp RIGHT_GUI &kp PIPE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RAISE
-                     >;
-              };
-              raise_layer {
- // ---------------------------------------------------------------------------------------------------------------------------------
- // |      `        |  F1         |  F2            |      F3        |      F4    |     F5     |                                    |     F6     |     F7           |   F8           |   F9              |   F10   |      DEL      |
- // |  transparent  |             |                |      UP        |            |            |                                    |            |                  |   UP           |                   |         |  transparent  |
- // |      =        |             |  LEFT          |     DOWN       |     RIGHT  |            |                                    |            |  LEFT            |  DOWN          |  RIGHT            |         |  transparent  |
- // |  transparent  |             |                |                |            |            |       |                    |       |            |                  |                |                   |         |  transparent  |
- // |  transparent  |             |                |                |            |            |       |                    |       |            |                  |                |                   |         |  transparent  |
-                     bindings = <
-       &kp GRAVE      &kp F1       &kp F2           &kp F3           &kp F4           &kp F5                                         &kp F6       &kp F7             &kp F8           &kp F9             &kp F10     &kp DEL
-       &trans         &trans       &trans           &kp UP_ARROW     &trans           &trans                                         &trans       &trans             &kp UP_ARROW     &trans             &trans      &trans
-       &trans         &trans       &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW  &trans                                         &trans       &kp LEFT_ARROW     &kp DOWN_ARROW   &kp RIGHT_ARROW    &trans      &trans
-       &trans         &trans       &trans           &trans           &trans           &trans    &trans                      &trans   &trans       &trans             &trans           &trans             &trans      &trans
-       &trans         &trans       &trans           &trans           &trans           &trans    &trans                      &trans   &trans       &trans             &trans           &trans             &trans      &trans
-                     >;
-              };
-       };
+        default_layer {
+            // ---------------------------------------------------------------------------------------------------------------------------------
+            // |   LOWER Hold / ESC Tap   |   1        |   2             |   3          |   4        |   5    |                          |   6      |   7           |   8    |   9             |   0              |   ADJUST Hold / BSPC Tap  |
+            // |   LOWER Hold / TAB Tap   |   Q        |   W             |   E          |   R        |   T    |                          |   Y      |   U           |   I    |   O             |   P              |            ENTER          |
+            // |           -              |   A        |   S             |   D          |   F        |   G    |                          |   H      |   J           |   K    |   L             |   ;              |             '             |
+            // |         SHIFT            |   Z        |   X             |   C          |   V        |   B    |         |        |       |   N      |   M           |   ,    |   .             |   /              |            RSHIFT         |
+            // |         RAISE            |   `        |  CTRL           |  ALT         |  LGUI      | SPACE  |         |        |       |  SPACE   |  RGUI         |   |    |   [             |   ]              |            RAISE          |
+
+            bindings = <
+&lt LOWER ESC   &kp N1     &kp N2            &kp N3        &kp N4        &kp N5                                          &kp N6     &kp N7         &kp N8     &kp N9            &kp N0             &lt ADJUST BSPC
+&lt LOWER TAB   &kp Q      &kp W             &kp E         &kp R         &kp T                                           &kp Y      &kp U          &kp I      &kp O             &kp P              &kp RET
+&kp MINUS       &kp A      &kp S             &kp D         &kp F         &kp G                                           &kp H      &kp J          &kp K      &kp L             &kp SEMI           &kp SQT
+&kp LEFT_SHIFT  &kp Z      &kp X             &kp C         &kp V         &kp B      &kp LEFT_COMMAND  &kp RIGHT_COMMAND  &kp N      &kp M          &kp COMMA  &kp PERIOD        &kp SLASH          &kp RIGHT_SHIFT
+&mo 1           &kp GRAVE  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &kp SPACE         &kp SPACE          &kp SPACE  &kp RIGHT_GUI  &kp PIPE   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &mo 1
+            >;
+        };
+
+        raise_layer {
+            // ---------------------------------------------------------------------------------------------------------------------------------
+            // |      `        |  F1         |  F2            |      F3        |      F4    |     F5     |                                    |     F6     |     F7           |   F8           |   F9              |   F10   |      DEL      |
+            // |  transparent  |             |                |      UP        |            |            |                                    |            |                  |   UP           |                   |         |  transparent  |
+            // |      =        |             |  LEFT          |     DOWN       |     RIGHT  |            |                                    |            |  LEFT            |  DOWN          |  RIGHT            |         |  transparent  |
+            // |  transparent  |             |                |                |            |            |       |                    |       |            |                  |                |                   |         |  transparent  |
+            // |  transparent  |             |                |                |            |            |       |                    |       |            |                  |                |                   |         |  transparent  |
+
+            bindings = <
+&kp GRAVE  &kp F1  &kp F2          &kp F3          &kp F4           &kp F5                  &kp F6  &kp F7          &kp F8          &kp F9           &kp F10  &kp DEL
+&trans     &trans  &trans          &kp UP_ARROW    &trans           &trans                  &trans  &trans          &kp UP_ARROW    &trans           &trans   &trans
+&trans     &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans   &trans
+&trans     &trans  &trans          &trans          &trans           &trans  &trans  &trans  &trans  &trans          &trans          &trans           &trans   &trans
+&trans     &trans  &trans          &trans          &trans           &trans  &trans  &trans  &trans  &trans          &trans          &trans           &trans   &trans
+            >;
+        };
+
+        lower_layer {
+            // ---------------------------------------------------------------------------------------------------------------------------------
+            // |  transparent   |    MUTE        |     VOLUME_DOWN    |     VOLUME_UP     |         |      |                                  |      |      |      |      |      |      |
+            // |  transparent   |  PREVIOUS      |     PLAY/PAUSE     |        NEXT       |         |      |                                  |      |      |      |      |      |      |
+            // |  transparent   |                |                    |                   |         |      |                                  |      |      |      |      |      |      |
+            // |  transparent   |                |                    |                   |         |      |     |                     |      |      |      |      |      |      |      |
+            // |  transparent   |                |                    |                   |         |      |     |                     |      |      |      |      |      |      |      |
+
+            bindings = <
+&trans  &kp K_MUTE  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp K_PREV  &kp K_PLAY_PAUSE   &kp K_NEXT       &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans             &trans           &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans             &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans             &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        adjust_layer {
+            // ---------------------------------------------------------------------------------------------------------------------------------
+            // |    `     |    !     |    @     |    #     |    $     |    %     |                                          |    ^     |    &     |    *     |    (     |    )     |  EP TOG  |
+            // |  BT CLR  | BT SEL0  | BT SEL1  | BT SEL2  | BGT SEL3 | BT SEL4  |                                          | RGB EFF+ | RGB HUE+ | RGB SAT+ | RGB SPD+ | RGB BRI+ | RGB TOG  |
+            // |  BT NXT  | OUT TOG  | OUT USB  | OUT BLE  |          |          |                                          | RGB EFF- | RGB HUE- | RGB SAT- | RGB SPD- | RGB BRI- |          |
+            // |  BT PRV  |          |          |          |          |          |    {     |                    |    }     |          |          |          |          |          |          |
+            // |          |          |          |          |          |          |          |                    |          |          |          |          |          |          |          |
+
+            bindings = <
+&kp GRAVE   &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT                         &kp CARET        &kp AMPS         &kp ASTRK        &kp LPAR         &kp RPAR         &ext_power EP_TOG
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG
+&bt BT_NXT  &out OUT_TOG  &out OUT_USB  &out OUT_BLE  &trans        &trans                            &rgb_ug RGB_EFR  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_SPD  &rgb_ug RGB_BRD  &trans
+&bt BT_PRV  &trans        &trans        &trans        &trans        &trans        &kp LBRC  &kp RBRC  &trans           &trans           &trans           &trans           &trans           &trans
+&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans    &trans           &trans           &trans           &trans           &trans           &trans
+            >;
+        };
+    };
 };
