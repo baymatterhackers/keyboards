@@ -65,11 +65,11 @@ As such, those are in use within the default layer at this time.*/
  // |  transparent   |                |                    |                   |         |      |     |                     |      |      |      |      |      |      |      |
  // |  transparent   |                |                    |                   |         |      |     |                     |      |      |      |      |      |      |      |
                      bindings = <
-       &trans           &kp K_MUTE      &kp K_VOLUME_DOWN     &kp K_VOLUME_UP    &trans   &trans                             &trans    &trans    &trans    &trans   &trans   &trans
-       &trans           &kp K_PREVOUS   &kp k_PLAY_PAUSE      &kp K_NEXT         &trans   &trans                             &trans    &trans    &trans    &trans   &trans   &trans
-       &trans           &trans          &trans                &trans             &trans   &trans                             &trans    &trans    &trans    &trans   &trans   &trans
-       &trans           &trans          &trans                &trans             &trans   &trans    &trans          &trans   &trans    &trans    &trans    &trans   &trans   &trans
-       &trans           &trans          &trans                &trans             &trans   &trans    &trans          &trans   &trans    &trans    &trans    &trans   &trans   &trans
+       &trans           &kp K_MUTE      &kp K_VOLUME_DOWN     &kp K_VOLUME_UP    &trans   &trans                                    &trans    &trans    &trans    &trans   &trans   &trans
+       &trans           &trans   &trans      &trans         &trans   &trans                                    &trans    &trans    &trans    &trans   &trans   &trans
+       &trans           &trans          &trans                &trans             &trans   &trans                                    &trans    &trans    &trans    &trans   &trans   &trans
+       &trans           &trans          &trans                &trans             &trans   &trans    &trans                 &trans   &trans    &trans    &trans    &trans   &trans   &trans
+       &trans           &trans          &trans                &trans             &trans   &trans    &trans                 &trans   &trans    &trans    &trans    &trans   &trans   &trans
                      >;
               };
               adjust_layer {
