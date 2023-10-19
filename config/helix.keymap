@@ -49,7 +49,7 @@ As such, those are in use within the default layer at this time.*/
  // |      =        |             |  LEFT          |     DOWN       |     RIGHT  |            |                                    |            |  LEFT            |  DOWN          |  RIGHT            |         |  transparent  |
  // |  transparent  |             |                |                |            |            |       |                    |       |            |                  |                |                   |         |  transparent  |
  // |  transparent  |             |                |                |            |            |       |                    |       |            |                  |                |                   |         |  transparent  |
-                     bindings = 
+                     bindings = <
        &kp GRAVE      &kp F1       &kp F2           &kp F3           &kp F4           &kp F5                                         &kp F6       &kp F7             &kp F8           &kp F9             &kp F10     &kp DEL 
        &trans         &trans       &trans           &kp UP_ARROW     &trans           &trans                                         &trans       &trans             &kp UP_ARROW     &trans             &trans      &trans
        &trans         &trans       &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW  &trans                                         &trans       &kp LEFT_ARROW     &kp DOWN_ARROW   &kp RIGHT_ARROW    &trans      &trans
