@@ -26,31 +26,17 @@ As such, those are in use within the default layer at this time.*/
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |   LOWER Hold / ESC Tap   |   1        |   2             |   3          |   4        |   5    |                          |   6      |   7           |   8    |   9             |   0              |   ADJUST Hold / BSPC Tap  |
-            // |   LOWER Hold / TAB Tap   |   Q        |   W             |   E          |   R        |   T    |                          |   Y      |   U           |   I    |   O             |   P              |            ENTER          |
-            // |           -              |   A        |   S             |   D          |   F        |   G    |                          |   H      |   J           |   K    |   L             |   ;              |             '             |
-            // |         SHIFT            |   Z        |   X             |   C          |   V        |   B    |         |        |       |   N      |   M           |   ,    |   .             |   /              |            RSHIFT         |
-            // |         RAISE            |   `        |  CTRL           |  ALT         |  LGUI      | SPACE  |         |        |       |  SPACE   |  RGUI         |   |    |   [             |   ]              |            RAISE          |
-
+        default_layer {         
             bindings = <
 &lt 2 ESC       &kp N1     &kp N2            &kp N3        &kp N4        &kp N5                                          &kp N6     &kp N7         &kp N8     &kp N9            &kp N0             &lt ADJUST BSPC
 &lt 2 TAB       &kp Q      &kp W             &kp E         &kp R         &kp T                                           &kp Y      &kp U          &kp I      &kp O             &kp P              &kp RET
 &kp MINUS       &kp A      &kp S             &kp D         &kp F         &kp G                                           &kp H      &kp J          &kp K      &kp L             &kp SEMI           &kp SQT
-&kp LEFT_SHIFT  &kp Z      &kp X             &kp C         &kp V         &kp B      &kp LEFT_COMMAND  &kp RIGHT_COMMAND  &kp N      &kp M          &kp COMMA  &kp PERIOD        &kp SLASH          &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &kp Z      &kp X             &kp C         &kp V         &kp B      &kp LEFT_GUI  &kp RIGHT_GUI  &kp N      &kp M          &kp COMMA  &kp PERIOD        &kp SLASH          &kp RIGHT_SHIFT
 &mo 1           &kp GRAVE  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &kp SPACE         &kp SPACE          &kp SPACE  &kp RIGHT_GUI  &kp PIPE   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &mo 1
             >;
         };
 
         raise_layer {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |      `        |  F1         |  F2            |      F3        |      F4    |     F5     |                                    |     F6     |     F7           |   F8           |   F9              |   F10   |      DEL      |
-            // |  transparent  |             |                |      UP        |            |            |                                    |            |                  |   UP           |                   |         |  transparent  |
-            // |      =        |             |  LEFT          |     DOWN       |     RIGHT  |            |                                    |            |  LEFT            |  DOWN          |  RIGHT            |         |  transparent  |
-            // |  transparent  |             |                |                |            |            |       |                    |       |            |                  |                |                   |         |  transparent  |
-            // |  transparent  |             |                |                |            |            |       |                    |       |            |                  |                |                   |         |  transparent  |
-
             bindings = <
 &kp GRAVE  &kp F1  &kp F2          &kp F3          &kp F4           &kp F5                  &kp F6  &kp F7          &kp F8          &kp F9           &kp F10  &kp DEL
 &trans     &trans  &trans          &kp UP_ARROW    &trans           &trans                  &trans  &trans          &kp UP_ARROW    &trans           &trans   &trans
@@ -61,13 +47,6 @@ As such, those are in use within the default layer at this time.*/
         };
 
         lower_layer {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  transparent   |    MUTE        |     VOLUME_DOWN    |     VOLUME_UP     |         |      |                                  |      |      |      |      |      |      |
-            // |  transparent   |  PREVIOUS      |     PLAY/PAUSE     |        NEXT       |         |      |                                  |      |      |      |      |      |      |
-            // |  transparent   |                |                    |                   |         |      |                                  |      |      |      |      |      |      |
-            // |  transparent   |                |                    |                   |         |      |     |                     |      |      |      |      |      |      |      |
-            // |  transparent   |                |                    |                   |         |      |     |                     |      |      |      |      |      |      |      |
-
             bindings = <
 &trans  &kp K_MUTE  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp K_PREV  &kp K_PLAY_PAUSE   &kp K_NEXT       &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
@@ -78,13 +57,6 @@ As such, those are in use within the default layer at this time.*/
         };
 
         adjust_layer {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |    `     |    !     |    @     |    #     |    $     |    %     |                                          |    ^     |    &     |    *     |    (     |    )     |  EP TOG  |
-            // |  BT CLR  | BT SEL0  | BT SEL1  | BT SEL2  | BGT SEL3 | BT SEL4  |                                          | RGB EFF+ | RGB HUE+ | RGB SAT+ | RGB SPD+ | RGB BRI+ | RGB TOG  |
-            // |  BT NXT  | OUT TOG  | OUT USB  | OUT BLE  |          |          |                                          | RGB EFF- | RGB HUE- | RGB SAT- | RGB SPD- | RGB BRI- |          |
-            // |  BT PRV  |          |          |          |          |          |    {     |                    |    }     |          |          |          |          |          |          |
-            // |          |          |          |          |          |          |          |                    |          |          |          |          |          |          |          |
-
             bindings = <
 &kp GRAVE   &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT                         &kp CARET        &kp AMPS         &kp ASTRK        &kp LPAR         &kp RPAR         &ext_power EP_TOG
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG
