@@ -12,7 +12,6 @@
 #define DEFAULT 0
 #define LOWER  1
 #define RAISE  2
-#define ADJUST 3
 
 // Log to USB (not working yet)
 // CONFIG_ZMK_USB_LOGGING=y
