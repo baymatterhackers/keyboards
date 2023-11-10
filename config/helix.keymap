@@ -67,7 +67,7 @@ As such, those are in use within the default layer at this time.*/
 &trans         &kp BACKSLASH  &kp RIGHT_BRACKET  &kp LEFT_BRACKET  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            label = "ɿoɿɿim";
+            label = "mirror";
         };
 
         keyboard {
