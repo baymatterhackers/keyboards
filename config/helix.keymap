@@ -85,11 +85,37 @@ As such, those are in use within the default layer at this time.*/
         backspace-word {
             bindings = <&kp LA(BACKSPACE)>;
             key-positions = <11 10>;
+            layers = <0>;
         };
 
         backspace-line {
             bindings = <&kp LG(BACKSPACE)>;
             key-positions = <9 10 11>;
+            layers = <0>;
+        };
+
+        l-right-arrow-word {
+            bindings = <&kp LA(RIGHT_ARROW)>;
+            key-positions = <16 28>;
+            layers = <1>;
+        };
+
+        l-left-arrow-word {
+            bindings = <&kp LA(LEFT_ARROW)>;
+            key-positions = <14 26>;
+            layers = <1>;
+        };
+
+        r-right-arrow-word {
+            bindings = <&kp RA(RIGHT_ARROW)>;
+            key-positions = <21 33>;
+            layers = <1>;
+        };
+
+        r-left-arrow-word {
+            bindings = <&kp RA(LEFT_ARROW)>;
+            key-positions = <19 31>;
+            layers = <1>;
         };
     };
 
