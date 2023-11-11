@@ -112,11 +112,11 @@ As such, those are in use within the default layer at this time.*/
 
         controls {
             bindings = <
-&trans  &kp F14     &kp F15            &kp C_AL_SCREENSAVER  &kp F20  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP       &kp F20  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp C_PREV  &kp C_PP           &kp C_NEXT            &trans   &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &trans             &trans                &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &trans             &trans                &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F14     &kp F15            &kp C_AL_SCREENSAVER  &kp K_POWER  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP       &kp F20      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp C_PREV  &kp C_PP           &kp C_NEXT            &trans       &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans             &trans                &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans             &trans                &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "controls";
