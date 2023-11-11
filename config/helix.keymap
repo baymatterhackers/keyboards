@@ -81,6 +81,16 @@ As such, those are in use within the default layer at this time.*/
             key-positions = <10 22>;
             layers = <0>;
         };
+
+        backspace-word {
+            bindings = <&kp LA(BACKSPACE)>;
+            key-positions = <11 10>;
+        };
+
+        backspace-line {
+            bindings = <&kp LG(BACKSPACE)>;
+            key-positions = <9 10 11>;
+        };
     };
 
     keymap {
