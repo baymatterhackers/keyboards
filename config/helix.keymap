@@ -96,42 +96,50 @@ As such, those are in use within the default layer at this time.*/
 
         super-up-r {
             bindings = <&kp PAGE_UP>;
-            key-positions = <8 20 35>;
+            key-positions = <8 20>;
+            layers = <1>;
         };
 
         super-down-r {
             bindings = <&kp PAGE_DOWN>;
-            key-positions = <32 46 35>;
+            key-positions = <32 46>;
+            layers = <1>;
         };
 
         super-left-r {
             bindings = <&kp RA(LEFT_ARROW)>;
-            key-positions = <30 31 35>;
+            key-positions = <30 31>;
+            layers = <1>;
         };
 
         super-right-r {
             bindings = <&kp RA(RIGHT_ARROW)>;
-            key-positions = <33 34 35>;
+            key-positions = <33 34>;
+            layers = <1>;
         };
 
         super-up-l {
             bindings = <&kp PAGE_UP>;
-            key-positions = <3 15 24>;
+            key-positions = <3 15>;
+            layers = <1>;
         };
 
         super-down-l {
             bindings = <&kp PAGE_DOWN>;
-            key-positions = <27 39 24>;
+            key-positions = <27 39>;
+            layers = <1>;
         };
 
         super-left-l {
             bindings = <&kp RA(LEFT_ARROW)>;
-            key-positions = <25 26 24>;
+            key-positions = <25 26>;
+            layers = <1>;
         };
 
         super-right-l {
             bindings = <&kp RA(RIGHT_ARROW)>;
-            key-positions = <28 29 24>;
+            key-positions = <28 29>;
+            layers = <1>;
         };
     };
 
