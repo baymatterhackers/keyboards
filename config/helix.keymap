@@ -93,6 +93,46 @@ As such, those are in use within the default layer at this time.*/
             key-positions = <9 10 11>;
             layers = <0>;
         };
+
+        super-up-r {
+            bindings = <&kp PAGE_UP>;
+            key-positions = <8 20 35>;
+        };
+
+        super-down-r {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <32 46 35>;
+        };
+
+        super-left-r {
+            bindings = <&kp RA(LEFT_ARROW)>;
+            key-positions = <30 31 35>;
+        };
+
+        super-right-r {
+            bindings = <&kp RA(RIGHT_ARROW)>;
+            key-positions = <33 34 35>;
+        };
+
+        super-up-l {
+            bindings = <&kp PAGE_UP>;
+            key-positions = <3 15 24>;
+        };
+
+        super-down-l {
+            bindings = <&kp PAGE_DOWN>;
+            key-positions = <27 39 24>;
+        };
+
+        super-left-l {
+            bindings = <&kp RA(LEFT_ARROW)>;
+            key-positions = <25 26 24>;
+        };
+
+        super-right-l {
+            bindings = <&kp RA(RIGHT_ARROW)>;
+            key-positions = <28 29 24>;
+        };
     };
 
     behaviors {
@@ -112,11 +152,11 @@ As such, those are in use within the default layer at this time.*/
 
         qwerty {
             bindings = <
-&lt 2 ESCAPE    &kp N1        &kp N2     &kp N3        &kp N4        &kp N5                               &kp NUMBER_6  &kp N7         &kp N8            &kp N9             &kp N0           &kp BACKSPACE
-&lt 2 TAB       &kp Q         &kp W      &kp E         &kp R         &kp T                                &kp Y         &kp U          &kp I             &kp O              &kp P            &kp RETURN
-&lt 2 MINUS     &lt 1 A       &kp S      &kp D         &kp F         &kp G                                &kp H         &kp J          &kp K             &kp L              &lt 1 SEMICOLON  &kp SINGLE_QUOTE
-&kp LEFT_SHIFT  &kp Z         &kp X      &kp C         &kp V         &kp B      &trans       &trans       &kp N         &kp M          &kp COMMA         &kp PERIOD         &kp SLASH        &kp RIGHT_SHIFT
-&mo 1           &kp CAPSLOCK  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &lt 3 SPACE  &lt 3 SPACE  &kp SPACE     &kp RIGHT_GUI  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH    &mo 1
+&lt 2 ESCAPE    &kp N1        &kp N2     &kp N3        &kp N4        &kp N5                               &kp NUMBER_6  &kp N7         &kp N8            &kp N9             &kp N0         &kp BACKSPACE
+&lt 2 TAB       &kp Q         &kp W      &kp E         &kp R         &kp T                                &kp Y         &kp U          &kp I             &kp O              &kp P          &kp RETURN
+&lt 1 MINUS     &kp A         &kp S      &kp D         &kp F         &kp G                                &kp H         &kp J          &kp K             &kp L              &kp SEMICOLON  &lt 1 SINGLE_QUOTE
+&kp LEFT_SHIFT  &kp Z         &kp X      &kp C         &kp V         &kp B      &trans       &trans       &kp N         &kp M          &kp COMMA         &kp PERIOD         &kp SLASH      &kp RIGHT_SHIFT
+&mo 1           &kp CAPSLOCK  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &lt 3 SPACE  &lt 3 SPACE  &kp SPACE     &kp RIGHT_GUI  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &mo 1
             >;
 
             label = "qwerty";
@@ -124,11 +164,11 @@ As such, those are in use within the default layer at this time.*/
 
         raise {
             bindings = <
-&kp GRAVE  &kp F1          &kp F2          &kp F3          &kp F4           &kp F5                  &kp F6  &kp F7          &kp F8          &kp F9           &kp F10          &kp DEL
-&trans     &trans          &trans          &kp UP_ARROW    &trans           &trans                  &trans  &trans          &kp UP_ARROW    &trans           &trans           &trans
-&kp EQUAL  &trans          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans           &trans
-&trans     &kp LEFT_SHIFT  &trans          &trans          &trans           &trans  &mo 4   &mo 4   &trans  &trans          &trans          &trans           &kp RIGHT_SHIFT  &trans
-&trans     &trans          &trans          &trans          &trans           &trans  &trans  &trans  &trans  &trans          &trans          &trans           &trans           &trans
+&kp GRAVE  &kp F1  &kp F2          &kp F3          &kp F4           &kp F5                  &kp F6  &kp F7          &kp F8          &kp F9           &kp F10  &kp DEL
+&trans     &trans  &trans          &kp UP_ARROW    &trans           &trans                  &trans  &trans          &kp UP_ARROW    &trans           &trans   &trans
+&kp EQUAL  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans                  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans   &trans
+&trans     &trans  &trans          &trans          &trans           &trans  &mo 4   &mo 4   &trans  &trans          &trans          &trans           &trans   &trans
+&trans     &trans  &trans          &trans          &trans           &trans  &trans  &trans  &trans  &trans          &trans          &trans           &trans   &trans
             >;
 
             label = "raise";
