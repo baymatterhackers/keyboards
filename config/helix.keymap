@@ -159,28 +159,32 @@ As such, those are in use within the default layer at this time.*/
         up_left: up_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp UP_ARROW &kp LEFT_ARROW>;
+            bindings = <&macro_tap>, <&kp UP_ARROW &kp LEFT_ARROW>;
+
             label = "UP_LEFT";
         };
 
         up_right: up_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp UP_ARROW &kp RIGHT_ARROW>;
+            bindings = <&macro_tap>, <&kp UP_ARROW &kp RIGHT_ARROW>;
+
             label = "UP_RIGHT";
         };
 
         down_left: down_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DOWN_ARROW &kp LEFT_ARROW>;
+            bindings = <&macro_tap>, <&kp DOWN_ARROW &kp LEFT_ARROW>;
+
             label = "DOWN_LEFT";
         };
 
         down_right: down_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DOWN_ARROW &kp RIGHT_ARROW>;
+            bindings = <&macro_tap>, <&kp DOWN_ARROW &kp RIGHT_ARROW>;
+
             label = "DOWN_RIGHT";
         };
     };
