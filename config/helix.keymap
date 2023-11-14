@@ -155,6 +155,36 @@ As such, those are in use within the default layer at this time.*/
         };
     };
 
+    macros {
+        up_left: up_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UP_ARROW &kp LEFT_ARROW>;
+            label = "UP_LEFT";
+        };
+
+        up_right: up_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UP_ARROW &kp RIGHT_ARROW>;
+            label = "UP_RIGHT";
+        };
+
+        down_left: down_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN_ARROW &kp LEFT_ARROW>;
+            label = "DOWN_LEFT";
+        };
+
+        down_right: down_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN_ARROW &kp RIGHT_ARROW>;
+            label = "DOWN_RIGHT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -173,9 +203,9 @@ As such, those are in use within the default layer at this time.*/
         raise {
             bindings = <
 &kp GRAVE  &none   &none           &none           &none            &none                   &none   &none           &none           &none            &none   &kp DEL
-&trans     &none   &none           &kp UP_ARROW    &none            &none                   &none   &none           &kp UP_ARROW    &none            &none   &trans
+&trans     &none   &up_left        &kp UP_ARROW    &up_right        &none                   &none   &up_left        &kp UP_ARROW    &up_right        &none   &trans
 &kp EQUAL  &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none                   &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none   &trans
-&trans     &none   &none           &none           &none            &none   &mo 4   &mo 4   &none   &none           &none           &none            &none   &trans
+&trans     &none   &down_left      &none           &down_right      &none   &mo 4   &mo 4   &none   &down_left      &none           &down_right      &none   &trans
 &trans     &trans  &trans          &trans          &trans           &trans  &trans  &trans  &trans  &trans          &trans          &trans           &trans  &trans
             >;
 
