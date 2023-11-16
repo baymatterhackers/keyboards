@@ -141,6 +141,11 @@ As such, those are in use within the default layer at this time.*/
             key-positions = <28 29>;
             layers = <1>;
         };
+
+        arrow-shift {
+            bindings = <&kp RS(RIGHT_GUI)>;
+            key-positions = <59 58>;
+        };
     };
 
     behaviors {
