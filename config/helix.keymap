@@ -204,7 +204,7 @@ As such, those are in use within the default layer at this time.*/
         select_word: select_word {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RA(RIGHT_ARROW) &kp RS(RG(LEFT_ARROW))>;
+            bindings = <&kp RA(RIGHT_ARROW) &kp RS(RA(LEFT_ARROW))>;
             label = "SELECT_WORD";
         };
 
