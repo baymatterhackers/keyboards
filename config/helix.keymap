@@ -200,6 +200,20 @@ As such, those are in use within the default layer at this time.*/
 
             label = "GRAB";
         };
+
+        select_word: select_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(RIGHT_ARROW) &kp RS(RG(LEFT_ARROW))>;
+            label = "SELECT_WORD";
+        };
+
+        select_line: select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RG(RIGHT_ARROW) &kp RS(RG(LEFT_ARROW))>;
+            label = "SELECT_LINE";
+        };
     };
 
     keymap {
@@ -219,11 +233,11 @@ As such, those are in use within the default layer at this time.*/
 
         raise {
             bindings = <
-&kp GRAVE  &none   &none           &none           &none            &none                   &none   &none           &none           &none            &none   &kp DEL
-&trans     &none   &up_left        &kp UP_ARROW    &up_right        &none                   &none   &up_left        &kp UP_ARROW    &up_right        &none   &trans
-&kp EQUAL  &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none                   &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none   &trans
-&trans     &none   &down_left      &none           &down_right      &none   &mo 4    &mo 4  &none   &down_left      &none           &down_right      &none   &trans
-&trans     &trans  &trans          &trans          &trans           &trans  &grab    &grab  &trans  &trans          &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans  &trans
+&kp GRAVE  &none   &none           &none           &none            &none                   &none         &none           &none           &none            &none   &kp DEL
+&trans     &none   &up_left        &kp UP_ARROW    &up_right        &none                   &none         &up_left        &kp UP_ARROW    &up_right        &none   &trans
+&kp EQUAL  &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none                   &none         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none   &trans
+&trans     &none   &down_left      &none           &down_right      &none   &mo 4    &mo 4  &none         &down_left      &none           &down_right      &none   &trans
+&trans     &trans  &trans          &trans          &trans           &trans  &grab    &grab  &select_word  &select_line    &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans  &trans
             >;
 
             label = "raise";
